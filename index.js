@@ -118,11 +118,6 @@ app.post('/app/flip/call/', (req, res, next) => {
     res.json(flipACoin(req.body.guess));
 });
 
-// app.post('/app/flip/call/tails', (req, res) => {
-//     res.status(200);
-//     res.json(flipACoin('tails'));
-// });
-
 app.use(function(req, res){
     res.status(404).send('404 NOT FOUND')
 });

@@ -68,7 +68,6 @@ async function guessFlip(event) {
     }
 }
 
-
 async function sendData({url, formData}) {
     const plainFormData = Object.fromEntries(formData.entries());
     const formDataJson = JSON.stringify(plainFormData);
