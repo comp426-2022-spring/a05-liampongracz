@@ -50,13 +50,12 @@ async function guessFlip(event) {
     event.preventDefault();
     let guess = event.submitter.getAttribute("value")
     const formEvent = event.currentTarget
-    const url = document.baseURI+"app/flips/";
+    const url = document.baseURI+"app/flip/call/";
 
     try {
         const formData = new FormData(formEvent)
         formData.append("guess",guess)
         const result = await sendData({ url, formData});
-        console.log(result);
 
         document.getElementById("call").innerHTML="Call: "+result.call;
         document.getElementById("callimg").setAttribute("src", "./assets/img/"+result.call+".png")
