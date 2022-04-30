@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
+
 router.get('/', (req, res) => {
-    res.statusCode = 200;
-    res.statusMessage = 'OK';
-    res.writeHead(res.statusCode, {'Content-Type' : 'text/plain'});
-    res.end(res.statusCode+ ' ' +res.statusMessage)
+    res.contentType('application/json');
+    res.status(200).json({message: "Coin Flip API functional"});
 });
 
 router.get('/flip/', (req, res) => {
@@ -44,3 +43,5 @@ function coinFlip() {
       return "tails"
     }
   }
+
+module.exports = router;
