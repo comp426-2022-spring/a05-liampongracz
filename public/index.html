@@ -46,7 +46,7 @@
     
     <div id="multi" class="hidden">
       <h1>Flip multiple coins</h1>
-      <form id = "coins">
+      <form id = "coins" onsubmit="flipCoins(event)">
         <label for = "number">
           <strong>How many coins?</strong>
         </label>
@@ -58,8 +58,22 @@
         <p id="tails"></p>
         <div id="resultTable"></div>
     </div>
+
     <div id="guess" class="hidden">
-      
+      <h1>Guess Flip</h1>
+      <form id = "userguess" onsubmit="guessFlip(event)">
+        <label>
+            <strong>Heads or tails?</strong>
+        </label>
+        <button form="guessform" type="submit" value="heads">Heads</button>
+        <button form="guessform" type="submit" value="tails">Tails</button>
+      </form>
+      <h2>Results: </h2>
+        <p id="call">Call: </p>
+        <img id = "callimg" class="smallcoin" src="./assets/img/coin.png">
+        <p id="flip">Flip: </p>
+        <img id = "flipimg" class="smallcoin" src="./assets/img/coin.png">
+        <p id="result">Result: </p>      
     </div>
 	<script src="main.js"></script>
   </body>

@@ -107,23 +107,18 @@ app.get('/app/flip/', (req, res) => {
     res.json(flipResult);
 });
 
-app.get('/app/flips/:number', (req, res) => {
-    res.status(200);
-    const flips = req.params.number || 1;
-    const values = coinFlips(flips);
-    const rawjson = {
-        "raw" : values,
-        "summary": countFlips(values)
-    };
-    res.json(rawjson)
+app.post('/app/flips/', (req, res) => {
+    const flips = coinFlips(req.body.number);
+    const count = countFlips(flips);
+    res.status(200).json({"raw":flips,"summary":count})
 });
 
-app.get('/app/flip/call/heads', (req, res) => {
+app.post('/app/flip/call/heads', (req, res) => {
     res.status(200);
     res.json(flipACoin('heads'));
 });
 
-app.get('/app/flip/call/tails', (req, res) => {
+app.post('/app/flip/call/tails', (req, res) => {
     res.status(200);
     res.json(flipACoin('tails'));
 });
