@@ -84,19 +84,28 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl http://localhost:5000/app/flip/
 ```
 
 #### Response body
 
 ```
-
+{"flip":"tails"}
 ```
 
 #### Response headers
 
 ```
-
+< HTTP/1.1 200 OK
+< X-Powered-By: Express
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 16
+< ETag: W/"10-N9e0DDykqBPnqphc8f4bzHcjsuM"
+< Date: Sat, 30 Apr 2022 18:28:35 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
+< 
+* Connection #0 to host localhost left intact
 ```
 
 ### /app/flips/:number/ (GET)
@@ -104,19 +113,26 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl http://localhost:5000/app/flips/
 ```
 
 #### Response body
 
 ```
-
+< HTTP/1.1 200 OK
+< X-Powered-By: Express
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 32
+< ETag: W/"20-WpuQbDVDuUjvbHkwtlV11lKgjZs"
+< Date: Sat, 30 Apr 2022 18:31:29 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
 ```
 
 #### Response headers
 
 ```
-
+{"raw":[],"summary":{"heads":0}}l
 ```
 
 ### /app/flip/coin/ (GET)
@@ -124,7 +140,7 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+Doesn't exist in A05
 ```
 
 #### Response body
@@ -144,7 +160,7 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+Doesn''t exist in A-5
 ```
 
 #### Response body
@@ -218,33 +234,20 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+url http://localhost:5000/app/log/access/
 ```
 
 #### Response body
 
 ```
-
-```
-
-#### Response headers
-
-```
-
-```
-
-### /app/log/access/ (GET)
-
-#### Request cURL
-
-```
-
-```
-
-#### Response body
-
-```
-
+< HTTP/1.1 404 Not Found
+< X-Powered-By: Express
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 13
+< ETag: W/"d-9cDc1x9S0CgmdX/8mukTB8yQ/hY"
+< Date: Sat, 30 Apr 2022 18:38:43 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
 ```
 
 #### Response headers
