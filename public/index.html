@@ -33,19 +33,30 @@
       <button id="guessnav" onclick="reveal('guess')">Guess the result</button>
     </nav>
     <div id="home">
-      <!-- <h2>Flip some coins!</h2>
-        <h4>You can flip one coin, multiple coints, or guess the outcome of a flip!</h4> -->
+      <h2>Flip some coins!</h2>
+        <h4>You can flip one coin, multiple coints, or guess the outcome of a flip!</h4>
     </div>   
 
     <div id="single" class="hidden">
-      <!-- <h1>Flip a coin</h1>
+      <h1>Flip a coin</h1>
       <button id="flipcoin" onclick = "flipCoin()">Flip</button>
-      <p id="side">Result:</p>
-      <img src="./assets/img/coin.png" id = "singleflip"> -->
+      <p id="side">Click to flip</p>
+      <img src="./assets/img/coin.png" id = "singleflip" width="250" height="250">
     </div>
     
     <div id="multi" class="hidden">
-      
+      <h1>Flip multiple coins</h1>
+      <form id = "coins">
+        <label for = "number">
+          <strong>How many coins?</strong>
+        </label>
+        <input type = "number" name = "number" id ="number">
+        <input type="submit" value = "Flip them !!">
+      </form>
+      <h2>Results: </h2>
+        <p id="heads"></p>
+        <p id="tails"></p>
+        <div id="resultTable"></div>
     </div>
     <div id="guess" class="hidden">
       
